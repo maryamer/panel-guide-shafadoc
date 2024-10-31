@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tailwind Project</title>
+    <link href="dist/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex justify-center p-10 flex-col pb-[60vh]">
+    <h1 class="text-3xl font-bold underline text-gray-700">
+      shafadoc panel guide
+    </h1>
+    <a
+      href="#installation"
+      class="text-lg mt-2 font-bold underline text-gray-600"
+    >
+      Installation
+    </a>
+
+    <ul class="list-disc pl-8 mt-5 z-0">
+      <li class="font-semibold folder">
+        <div class="flex items-center gap-3">
+          <div class="group relative w-full">
+            src/
+            <div class="desc">
+              Each folder and file within the app directory corresponds to a
+              route in your application. For example, app/about/page.js would
+              create a route at /about.
+            </div>
+          </div>
+        </div>
+        <ul class="list-disc pl-8">
+          <li class="folder">
+            <a href="#app" class="group block relative">
+              app/
+              <div class="desc flex-col">
+                app folder
+                <br />
+                Each folder and file within the app directory corresponds to a
+                route in your application. For example, app/login/page.ts or
+                page.tsx would create a route at /login.
+                <div class="flex p-2 gap-2 max-h-[50vh]">
+                  <img
+                    class="object-contain"
+                    src="./assets/images/app/app-login-folder.PNG"
+                    alt=""
+                  />
+                  <img
+                    class="object-contain"
+                    src="./assets/images/app/url.PNG"
+                    alt=""
+                  />
+                </div>
+                <div class="relative">
+                  <span class="text-purple-700">
+                    where /panel comes from?
+                  </span>
+                  <div class="flex-col">
+                    we are setting basePath inside next.config.mjs file in root
+                    of our project
+                    <br />
+                    basePath: This property specifies a base path for the
+                    application. When you set basePath, all routes in your
+                    application will be prefixed with this base path. For
+                    example, if you have a page at /dashboard, it would be
+                    accessible at /panel/dashboard instead. This is particularly
+                    useful if you're deploying your application under a
+                    subdirectory or if you want to organize routes in a way that
+                    distinguishes sections of your app.
+                    <div class="grid grid-cols-2 p-2 gap-2 max-h-[50vh]">
+                      <img
+                        class="object-contain flex-1"
+                        src="./assets/images/nextconfigmjs/nextconfigfile.PNG"
+                        alt=""
+                      />
+                      <img
+                        class="object-contain flex-1"
+                        src="./assets/images/nextconfigmjs//url.PNG"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="folder">
+            <div class="group relative">
+              components/
+              <div class="desc">
+                components folder
+                <br />
+                is where we place reusable UI components that can be used across
+                different pages.
+              </div>
+            </div>
+          </li>
+          <li class="folder">context/</li>
+          <li class="folder">features/</li>
+          <li class="folder">hooks/</li>
+          <li class="folder">layout/</li>
+          <li class="folder">interface/</li>
+          <li class="font-semibold folder">
+            lib/
+            <ul class="list-disc pl-8">
+              <li class="file">axios.js</li>
+              <li class="file">api/</li>
+              <li class="font-semibold folder">
+                hooks/
+                <ul class="list-disc pl-8">
+                  <li class="file">useDoctorTable.js</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="folder">schema/</li>
+          <li class="folder">service/</li>
+          <li class="folder">styles/</li>
+          <li class="file">middleware.ts</li>
+          <li class="font-semibold folder">
+            components/
+            <ul class="list-disc pl-8">
+              <li class="file">DoctorTable.html</li>
+              <li class="file">GridLoader.html</li>
+              <li class="file">ReservationViewTable.html</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="file">
+        <div class="group block relative">
+          next.config.mjs
+          <div class="desc flex-col">
+            next.config.mjs
+            <br />
+            basePath: This property specifies a base path for the application.
+            When you set basePath, all routes in your application will be
+            prefixed with this base path. For example, if you have a page at
+            /dashboard, it would be accessible at /panel/dashboard instead. This
+            is particularly useful if you're deploying your application under a
+            subdirectory or if you want to organize routes in a way that
+            distinguishes sections of your app.
+            <div class="grid grid-cols-2 p-2 gap-2 max-h-[50vh]">
+              <img
+                class="object-contain flex-1"
+                src="./assets/images/nextconfigmjs/nextconfigfile.PNG"
+                alt=""
+              />
+              <img
+                class="object-contain flex-1"
+                src="./assets/images/nextconfigmjs//url.PNG"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="file">
+        <div class="group block relative">
+          tsconfig.json
+          <div class="desc flex-col">
+            tsconfig.json
+            <br />
+            tsconfig.json file is used to configure TypeScript options. This
+            file specifies how TypeScript should compile your code
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <section id="installation" class="mt-10">
+      <h2 class="text-xl font-bold underline text-gray-700">#installation</h2>
+      <div class="py-5">
+        <p>
+          git clone https://<span class="text-gray-400">(your-token)</span
+          >@github.com/shafadoc/panel.git
+        </p>
+        <p>git checkout <span class="text-gray-400">(branch-name)</span></p>
+        <p>npm i</p>
+        <p>npm run dev</p>
+      </div>
+    </section>
+    <section id="app" class="mt-10">
+      <h2 class="text-xl font-bold underline text-gray-700">#app folder</h2>
+      <ul class="list-disc pl-8 mt-2 z-0">
+        <li class="font-semibold folder">
+          <div class="group relative w-full">app/</div>
+          <ul class="list-disc pl-8">
+            <li class="folder">
+              <div class="group block relative">
+                (auth-routes)/
+                <div class="desc flex-col">
+                  (auth-routes)
+                  <br />
+                  The (auth-routes) folder in the app folder groups the routes
+                  that need authentication to access them.
+                </div>
+              </div>
+              <ul class="list-disc pl-8">
+                <li class="folder">
+                  chache/
+
+                  <ul class="list-disc pl-8">
+                    <li class="file group relative">
+                      page.tsx
+                      <div class="desc flex flex-col">
+                        <h2 class="text-2xl font-bold mb-4">Cache page</h2>
+                        <h2 class="text-xl font-bold mb-2">
+                          update json data with route handlers
+                        </h2>
+
+                        <p>
+                          In our application, we utilize a caching mechanism to
+                          efficiently manage static data that infrequently
+                          changes. This approach minimizes unnecessary API
+                          requests and enhances performance.
+                        </p>
+
+                        <h3>Overview</h3>
+                        <ol>
+                          <li>
+                            <strong>Data Source:</strong> The application
+                            retrieves data from specific APIs that reflect
+                            infrequent updates from our database.
+                          </li>
+                          <li>
+                            <strong>Local Storage:</strong> To optimize
+                            performance, we store this data in local JSON files.
+                            This allows us to serve the data directly from the
+                            filesystem instead of making repeated API calls.
+                          </li>
+                          <li>
+                            <strong>Update Mechanism:</strong> When updates to
+                            the database occur, we refresh the local JSON files
+                            by clicking a dedicated button in the user
+                            interface.
+                          </li>
+                        </ol>
+
+                        <h3>How It Works</h3>
+
+                        <p>
+                          <strong>User Interaction:</strong> The user clicks the
+                          "Clear Cache" button, which triggers the
+                          <code>updateStaticData</code> function.
+                        </p>
+                        <pre><code>&lt;Button
+  loading={isLoading}
+  colour={"red"}
+  className="px-4 my-5"
+  onClick={() => updateStaticData()}
+&gt;
+  پاک کردن حافظه پنهان
+&lt;/Button&gt;
+</code></pre>
+
+                        <p>
+                          <strong>Fetching Data:</strong> This function calls
+                          <code>getStaticDataJson</code>, which interacts with
+                          our route handler located at
+                          <code>src/app/api/static/route.ts</code>.
+                        </p>
+                        <pre><code>async function updateStaticData() {
+  try {
+    setIsLoading(true);
+    const updateStatic = await getStaticDataJson();
+    if (updateStatic) {
+      toast.success("حافظه پنهان با موفقیت پاک شد");
+    }
+  } catch (error) {
+    toast.error("عملیات پاک کردن حافظه cache با مشکل مواجه شد");
+  } finally {
+    setIsLoading(false);
+  }
+}
+</code></pre>
+
+                        <p>
+                          <strong>Data Retrieval:</strong> The route handler
+                          fetches the latest data from the external APIs,
+                          processes it, and writes it to the local JSON files.
+                        </p>
+                        <pre><code>export async function GET() {
+  try {
+    const citiesData = await getStaticData({ url: "centers/v1/cities" });
+    await fs.writeFile(
+      "src/assets/Json/cities.json",
+      JSON.stringify(citiesData?.[0]?.data?.data)
+    );
+
+    return new Response(
+      JSON.stringify({ message: "بروزرسانی با موفقیت انجام گرفت." }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (error) {
+    return new Response(
+      JSON.stringify({ message: "بروزرسانی به مشکل خورد." }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
+}
+</code></pre>
+
+                        <p>
+                          <strong>User Feedback:</strong> After a successful
+                          update, a success toast notification informs the user
+                          that the cache has been successfully cleared. In case
+                          of an error, an error notification is displayed.
+                        </p>
+                        <pre><code>toast.success(response?.data?.message);
+toast.error(error?.response?.data?.message);
+</code></pre>
+
+                        <p>
+                          This system ensures that our application remains
+                          responsive and up-to-date with minimal overhead,
+                          enhancing the overall user experience.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="folder">
+                  dashboard/
+                  <ul class="list-disc pl-8">
+                    <li class="file">page.tsx</li>
+                  </ul>
+                </li>
+                <li class="folder">
+                  geo/
+                  <ul class="list-disc pl-8">
+                    <li class="file">page.tsx</li>
+                  </ul>
+                </li>
+                <li class="folder">
+                  messages/
+                  <ul class="list-disc pl-8">
+                    <li class="folder">
+                      comments/
+                      <ul class="list-disc pl-8">
+                        <li class="file">page.tsx</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="folder">
+                  nodes/
+                  <ul class="list-disc pl-8">
+                    <li class="folder">
+                      [node-type]/
+                      <ul class="list-disc pl-8">
+                        <li class="folder">[node-id]/</li>
+                        <li class="file">page.tsx</li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      coreinsurance/
+                      <ul class="list-disc pl-8">
+                        <li class="file">page.tsx</li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      insurance-specialities/
+                      <ul class="list-disc pl-8">
+                        <li class="file">page.tsx</li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      managers/
+                      <ul class="list-disc pl-8">
+                        <li class="file">page.tsx</li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      settings/
+                      <ul class="list-disc pl-8">
+                        <li class="file">page.tsx</li>
+                      </ul>
+                    </li>
+                    <li class="file">layout.tsx/</li>
+                  </ul>
+                </li>
+                <li class="folder">api/</li>
+                <li class="font-semibold folder">
+                  hooks/
+                  <ul class="list-disc pl-8">
+                    <li class="file">useDoctorTable.js</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="folder">
+              <div class="">
+                components/
+                <ul class="list-disc pl-8">
+                  <li class="file group relative">
+                    page.tsx
+                    <div class="desc flex-col p-2 flex">
+                      <h2 class="text-2xl font-bold mb-4">Components page</h2>
+
+                      <br />
+                      The components page is where we showcase previews of the
+                      most common and important UI components that can be used
+                      across different pages. This is useful during development,
+                      and in production, we will name this folder '_components'
+                      to ignore this route
+                      <div class="flex gap-2 w-full py-2 max-h-[50vh]">
+                        <img
+                          class="object-contain flex h-full hover:border hover:border-green-600 w-full"
+                          src="./assets/images/app/component-page/Capture.PNG"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="folder">login/</li>
+            <li class="file group relative">
+              layout.tsx
+              <div class="desc flex-col p-2 flex">
+                <h2 class="text-2xl font-bold mb-4">Components page</h2>
+
+                <br />
+                The components page is where we showcase previews of the most
+                common and important UI components that can be used across
+                different pages. This is useful during development, and in
+                production, we will name this folder '_components' to ignore
+                this route
+                <div class="flex gap-2 w-full py-2 max-h-[50vh]">
+                  <img
+                    class="object-contain flex h-full hover:border hover:border-green-600 w-full"
+                    src="./assets/images/app/component-page/Capture.PNG"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="file">page.tsx</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

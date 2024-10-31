@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.file {
+  color: #16a34aa8;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+.folder {
+  color: #2563eb;
+  position: relative;
+  cursor: pointer;
+}
+.folder:hover {
+  color: #eb2525;
+}
+.file:hover {
+  color: #eb2525;
+}
+a:hover {
+  color: purple !important;
+}
+
+.desc {
+  @apply hidden scale-125 max-h-[50vh] overflow-y-auto cursor-pointer group-hover:flex left-[15%] -top-0 border p-2 rounded bg-gray-200  z-50 w-[50vw] absolute text-sm text-gray-700;
+}
+
+code {
+  color: green;
+}
+section {
+  border: 1px solid gray;
+  padding: 15px;
+  border-radius: 5px;
+}
