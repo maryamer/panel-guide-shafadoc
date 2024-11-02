@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Tailwind Project</title>
     <link href="dist/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body class="flex justify-center p- flex-col p-10 pb-[60vh]">
+  <body class="flex justify-center p-10 flex-col pb-[60vh]">
     <h1 class="text-3xl font-bold underline text-gray-700">
       shafadoc panel guide
     </h1>
@@ -323,16 +327,7 @@ toast.error(error?.response?.data?.message);
                 <li class="folder">
                   dashboard/
                   <ul class="list-disc pl-8">
-                    <li class="file group">
-                      page.tsx
-                      <div class="desc flex-col">
-                        <img
-                          class="object-contain flex-1"
-                          src="./assets/images/app/auth-routes/dashboard/dashboard-page.PNG"
-                          alt=""
-                        />
-                      </div>
-                    </li>
+                    <li class="file">page.tsx</li>
                   </ul>
                 </li>
                 <li class="folder">
@@ -386,38 +381,7 @@ toast.error(error?.response?.data?.message);
                         <li class="file">page.tsx</li>
                       </ul>
                     </li>
-                    <li class="file">
-                      nodes/layout.tsx/
-                      <div class="desc flex-col">
-                        <h2 class="text-2xl font-bold mb-4">
-                          (auth-routes)/layout.tsx
-                        </h2>
-
-                        (auth-routes)/layout.tsx
-                        <br />
-                        The AuthRouteLayout component provides a structured
-                        layout for authenticated routes in a React application.
-                        It imports a Header component and uses it at the top of
-                        the layout. The main section of the layout is designed
-                        to fill the available vertical space, accommodating the
-                        children prop, which represents the nested content
-                        within this layout. The overall design ensures a clean
-                        and organized presentation for pages that require user
-                        authentication.
-                        <div class="grid grid-cols-2 p-2 gap-2 max-h-[50vh]">
-                          <img
-                            class="object-contain flex-1"
-                            src="./assets/images/app/auth-routes/layout/Capture.PNG"
-                            alt=""
-                          />
-                          <img
-                            class="object-contain flex-1"
-                            src="./assets/images/app/auth-routes/layout/dashboard view.png"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </li>
+                    <li class="file">layout.tsx/</li>
                   </ul>
                 </li>
                 <li class="folder">api/</li>
@@ -426,37 +390,6 @@ toast.error(error?.response?.data?.message);
                   <ul class="list-disc pl-8">
                     <li class="file">useDoctorTable.js</li>
                   </ul>
-                </li>
-                <li class="font-semibold group file">
-                  (auth-routes)/layout.tsx
-                  <div class="desc flex-col">
-                    <h2 class="text-2xl font-bold mb-4">
-                      (auth-routes)/layout.tsx
-                    </h2>
-
-                    (auth-routes)/layout.tsx
-                    <br />
-                    The AuthRouteLayout component provides a structured layout
-                    for authenticated routes in a React application. It imports
-                    a Header component and uses it at the top of the layout. The
-                    main section of the layout is designed to fill the available
-                    vertical space, accommodating the children prop, which
-                    represents the nested content within this layout. The
-                    overall design ensures a clean and organized presentation
-                    for pages that require user authentication.
-                    <div class="grid grid-cols-2 p-2 gap-2 max-h-[50vh]">
-                      <img
-                        class="object-contain flex-1"
-                        src="./assets/images/app/auth-routes/layout/Capture.PNG"
-                        alt=""
-                      />
-                      <img
-                        class="object-contain flex-1"
-                        src="./assets/images/app/auth-routes/layout/dashboard view.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
                 </li>
               </ul>
             </li>
@@ -491,58 +424,20 @@ toast.error(error?.response?.data?.message);
             <li class="file group">
               layout.tsx
               <div class="desc flex-col p-2 flex">
-                <h2 class="text-2xl font-bold mb-4">Layout.tsx</h2>
+                <h2 class="text-2xl font-bold mb-4">Components page</h2>
 
                 <br />
-                <div class="max-w-2xl mx-auto p-4">
-                  <h2 class="text-2xl font-bold mb-4">
-                    Purpose and Usage of <code>layout.js</code>
-                  </h2>
-                  <p class="mb-2">
-                    The <code>layout.js</code> file acts as the main layout for
-                    our Next.js application, providing a consistent design and
-                    essential features across all pages. It includes several
-                    important providers:
-                  </p>
-                  <ul class="list-disc list-inside mb-4">
-                    <li>
-                      <strong>State Management</strong>: The
-                      <code>StoreProvider</code> helps manage the app's state
-                      using Redux.
-                    </li>
-                    <li>
-                      <strong>Data Fetching</strong>:
-                      <code>ReactQueryClientProvider</code> is used for fetching
-                      and caching data with React Query.
-                    </li>
-                    <li>
-                      <strong>Form Handling</strong>:
-                      <code>HookFormProvider</code> makes it easier to manage
-                      and validate forms.
-                    </li>
-                    <li>
-                      <strong>Authentication</strong>: The
-                      <code>AuthProvider</code> handles user login and
-                      permissions.
-                    </li>
-                    <li>
-                      <strong>Notifications</strong>: The
-                      <code>Toaster</code> displays real-time notifications for
-                      users.
-                    </li>
-                  </ul>
-                  <p class="mb-2">
-                    It also uses the <code>Suspense</code> component to show a
-                    loading spinner (<code>GridLoader</code>) while waiting for
-                    components to load, improving the user experience. The
-                    layout sets the document's language and direction to support
-                    right-to-left text for Persian users.
-                  </p>
-                  <p>
-                    Overall, this layout provides a solid foundation for the
-                    app, promoting code reuse, making it easier to maintain, and
-                    enhancing user experience.
-                  </p>
+                The components page is where we showcase previews of the most
+                common and important UI components that can be used across
+                different pages. This is useful during development, and in
+                production, we will name this folder '_components' to ignore
+                this route
+                <div class="flex gap-2 w-full py-2 max-h-[50vh]">
+                  <img
+                    class="object-contain flex h-full hover:border hover:border-green-600 w-full"
+                    src="./assets/images/app/component-page/Capture.PNG"
+                    alt=""
+                  />
                 </div>
               </div>
             </li>
